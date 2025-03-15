@@ -38,7 +38,7 @@
                 console.log(response.data);
             })
             .catch(error => {
-                getResponse.lastChild.textContent = `ERROR!: ${error}`;
+                getResponse.textContent = `ERROR!: ${error}`;
                 console.error('Ошибка при выполнении запроса: ', error);
             });
     </script>
