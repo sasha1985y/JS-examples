@@ -11,8 +11,9 @@ function createDropdown() {
         { value: "https://sasha1985y.github.io/JS-examples/axios_get2", text: "axios_get2" },
         { value: "https://sasha1985y.github.io/JS-examples/axios_post3", text: "axios_post3" },
         { value: "https://sasha1985y.github.io/JS-examples/axios_config4", text: "axios_config4" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios.params5", text: "axios.params5" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios_post3", text: "axios_post3" }
+        { value: "https://sasha1985y.github.io/JS-examples/axios_params5", text: "axios_params5" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios_parallel_queries6", text: "axios_parallel_queries6" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios_interceptors7", text: "axios_interceptors7" },
     ];
 
     options.forEach(function(option) {
