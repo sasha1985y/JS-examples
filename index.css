@@ -41,8 +41,6 @@ a {
 }
 
 header {
-    position: sticky;
-    display: block;
     text-align: center;
     min-height: 10vh;
     max-width: 100vw;
