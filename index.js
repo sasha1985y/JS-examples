@@ -26,7 +26,7 @@ function createDropdown() {
     });
 
     // Добавляем select в body или в нужный контейнер
-    document.body.appendChild(select);
+    //document.body.appendChild(select);
 }
 
 function navigate() {
