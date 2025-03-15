@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>fetch_send_data8</title>
+</head>
+
+<body>
+    <header><select name="linkSelect" id="linkSelect"></select></header>
+    <main>
+
+        <div id="getResponse"></div>
+    </main>
+    <footer><a href="https://github.com/sasha1985y/JS-examples/blob/main/fetch_send_data8.html">ссылка на код</a></footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const getResponse = document.getElementById('getResponse');
+
+        async function postData() {
+            const url = 'https://jsonplaceholder.typicode.com/posts';
+            const data = {
+                title: 'foo',
+                body: 'bar',
+                userId: 1
+            };
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            const { title, body, userId, id } = result;
+
+            getResponse.textContent = `title: ${title}, body: ${body}, userId: ${userId}, id: ${id}`;
+        }
+
+        postData();
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

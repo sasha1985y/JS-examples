@@ -12,6 +12,7 @@ function createDropdown() {
         { value: "https://sasha1985y.github.io/JS-examples/axios_params5", text: "axios_params5" },
         { value: "https://sasha1985y.github.io/JS-examples/axios_parallel_queries6", text: "axios_parallel_queries6" },
         { value: "https://sasha1985y.github.io/JS-examples/axios_interceptors7", text: "axios_interceptors7" },
+        { value: "https://sasha1985y.github.io/JS-examples/fetch_send_data8", text: "fetch_send_data8" },
     ];
 
     options.forEach(function(option) {
