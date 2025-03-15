@@ -1,6 +1,8 @@
 :root {
-    --bacground-color: #1983ca;
+    --bacground-color: #2F8CAE;
     --font-size: 24px;
+    --dark-color: #323635;
+    --grey-color: #485464;
     --color: #12e62e;
     --a-color: #c4a113;
     --special-text-color: #ffbb00;
@@ -13,7 +15,7 @@
 }
 
 body {
-    background-color: var(--bacground-color);
+    background-color: var(--dark-color);
     text-align: center;
     min-height: 100vh;
     max-width: 100vw;
