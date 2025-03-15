@@ -40,6 +40,7 @@ a {
     color: var(--special-text-color);
 }
 
-#linkSelect {
+header {
     position: fixed;
+    text-align: end;
 }
