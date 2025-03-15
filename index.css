@@ -55,6 +55,7 @@ header {
 main {
     min-height: 60vh;
     max-width: 100vw;
+    background-color: var(--dark-color);
 }
 
 footer {
