@@ -7,12 +7,12 @@ function createDropdown() {
     // Создаем опции
     var options = [
         { value: "", text: "Выберите ссылку" },
-        { value: "https://sasha1985y.github.io/JS-examples/index.html/", text: "index" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios_get2/", text: "axios_get2" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios_post3/", text: "axios_post3" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios_config4/", text: "axios_config4" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios.params5/", text: "axios.params5" },
-        { value: "https://sasha1985y.github.io/JS-examples/axios_post3/", text: "axios_post3" }
+        { value: "https://sasha1985y.github.io/JS-examples/index.html", text: "index" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios_get2", text: "axios_get2" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios_post3", text: "axios_post3" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios_config4", text: "axios_config4" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios.params5", text: "axios.params5" },
+        { value: "https://sasha1985y.github.io/JS-examples/axios_post3", text: "axios_post3" }
     ];
 
     options.forEach(function(option) {
