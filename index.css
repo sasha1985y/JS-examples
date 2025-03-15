@@ -49,3 +49,13 @@ header {
     height: 10vh;
     width: 100vw;
 }
+
+main {
+    height: 70vh;
+    width: 100vw;
+}
+
+footer {
+    height: 20vh;
+    width: 100vw;
+}
