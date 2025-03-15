@@ -9,6 +9,8 @@
 body {
     background-color: var(--bacground-color);
     text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 header {
