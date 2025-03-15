@@ -34,7 +34,7 @@ a {
 #getResponse {
     font-size: 2em;
     color: var(--color);
-    background-color: var(--bacground-color);
+    background-color: var(--dark-color);
 }
 
 #getInterseptor_1,
