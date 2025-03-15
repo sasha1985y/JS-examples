@@ -13,24 +13,10 @@
 <body>
     <header><select name="linkSelect" id="linkSelect"></select></header>
     <main>
+
         <div id="getResponse"></div>
-        <div id="demo">
-        <h2>The XMLHttpRequest Object</h2>
-        <button type="button" onclick="loadDoc()">Change Content</button>
-        </div>
     </main>
     <footer></footer>
-    <script>
-        function loadDoc() {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-            document.getElementById("demo").innerHTML =
-            this.responseText;
-            }
-            xhttp.open("GET", "https://github.com/sasha1985y/JS-examples/blob/main/ajax_info.txt");
-            xhttp.send();
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         const getResponse = document.getElementById('getResponse');
