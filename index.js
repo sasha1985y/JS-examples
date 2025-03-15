@@ -1,9 +1,9 @@
 function createDropdown() {
     // Создаем элемент select
-    var select = document.createElement("select");
-    var header = document.getElementsByTagName("header");
-    header.appendChild(select);
-    select.id = "linkSelect";
+    // var select = document.createElement("select");
+    // var header = document.getElementsByTagName("header");
+    // header.appendChild(select);
+    // select.id = "linkSelect";
     select.onchange = navigate;
 
     // Создаем опции
