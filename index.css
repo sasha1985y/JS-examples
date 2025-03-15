@@ -43,6 +43,7 @@ a {
 }
 
 header {
+    display: block;
     position: fixed;
     text-align: end;
     height: 10vh;
