@@ -41,7 +41,8 @@ a {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     text-align: end;
-    height: 50px;
+    height: 10vh;
+    width: 100vw;
 }
