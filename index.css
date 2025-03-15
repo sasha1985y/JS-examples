@@ -10,7 +10,7 @@
 
 body {
     background-color: var(--bacground-color);
-    text-align: center;
+    text-align: start;
     min-height: 100vh;
     max-width: 100vw;
 }
