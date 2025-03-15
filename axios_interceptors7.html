@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>axios_interceptors7</title>
+</head>
+
+<body>
+    <div class="test">Test</div>
+    <div id="getInterseptor_1"></div>
+    <div id="getResponse"></div>
+    <div id="getInterseptor_2"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const getInterseptor_1 = document.getElementById('getInterseptor_1');
+        const getResponse = document.getElementById('getResponse');
+        const getInterseptor_2 = document.getElementById('getInterseptor_2');
+
+        // Добавление перехватчика для запросов
+        axios.interceptors.request.use(config => {
+            getInterseptor_1.textContent = `Запрос отправлен серверу: ${new Date()}`;
+            return config;
+        }, error => {
+            return Promise.reject(getResponse.textContent = error);
+        });
+
+        // Добавление перехватчика для ответов
+        axios.interceptors.response.use(response => {
+            const { userId, id, title, completed } = response.data;
+            getResponse.textContent = `userId: ${userId}\n id: ${id}\n title: ${title}\n completed: ${completed}`;
+            getInterseptor_2.textContent = `Получен ответ от сервера: ${new Date()}`;
+            return response;
+        }, error => {
+            return Promise.reject(getResponse.textContent = error);
+        });
+
+        // Пример запроса с перехватчиками
+        axios.get('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => console.log(response.data))
+            .catch(error => getResponse.textContent = Ошибка `при выполнении запроса: ${error}`);
+    </script>
+    <a href="axios_parallel_queries6.html">axios_parallel_queries6.html</a>
+</body>
+
+</html>

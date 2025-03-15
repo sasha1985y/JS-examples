@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>axios_1</title>
+</head>
+
+<body>
+    <div id="getResponse"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const getResponse = document.getElementById('getResponse');
+
+
+        axios.get('https://jsonplaceholder.typicode.com/posts', {
+            params: {
+                userId: 1 // Параметры запроса передаются через объект params
+            }
+        })
+            .then(response => {
+
+                for (let i = 0; i < response.data.length; i++) {
+                    const itemObject = response.data[i];
+                    let ulContainer = document.createElement("ul");
+                    getResponse.appendChild(ulContainer);
+                    for (const item in itemObject) {
+                        let liContainer = document.createElement("li");
+                        ulContainer.appendChild(liContainer)
+                            .textContent = `${item}: ${itemObject[item]}`;
+                    }
+                }
+                console.log(response.data);
+            })
+            .catch(error => {
+                getResponse.lastChild.textContent = `ERROR!: ${error}`;
+                console.error('Ошибка при выполнении запроса: ', error);
+            });
+    </script>
+    <a href="axios_get2.html">axios_get2.html</a>
+</body>
+
+</html>

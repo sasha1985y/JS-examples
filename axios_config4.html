@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>axios_config4</title>
+</head>
+
+<body>
+    <div id="getResponse"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const getResponse = document.getElementById('getResponse');
+        
+        const config = {
+            method: 'get', // может быть 'get', 'post', 'put', 'delete' и т.д.
+            url: 'https://jsonplaceholder.typicode.com/posts/1',
+            headers: {
+                'Content-Type': 'application/json' // Заголовок для указания типа данных
+            },
+        };
+
+        axios(config)
+        .then(response => getResponse.textContent = `body: ${response.data.body}\n id: ${response.data.id}\n title: ${response.data.title}\n userId: ${response.data.userId}`)
+        .catch(error => console.error('Ошибка при выполнении запроса: ', error));
+    </script>
+    <a href="axios_post3.html">axios_post3.html</a>
+    <a href="axios_params5.html">axios_params5.html</a>
+</body>
+
+</html>
