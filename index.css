@@ -11,6 +11,10 @@ body {
     text-align: center;
 }
 
+header {
+    height: 30px;
+}
+
 ul {
     list-style: none;
 }
