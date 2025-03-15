@@ -33,5 +33,15 @@ function navigate() {
     }
 }
 
+
+function getExample() {
+    const codeExampleBtn = document.querySelector(".code-example-btn");
+    const codeExample = document.querySelector(".code-example");
+    
+    codeExampleBtn.addEventListener('click', () => {
+        codeExample.classList.toggle("visually-hidden")
+    })
+}
+
 // Вызываем функцию для создания dropdown при загрузке страницы
 window.onload = createDropdown;

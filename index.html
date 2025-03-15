@@ -13,8 +13,50 @@
 <body>
     <header><select name="linkSelect" id="linkSelect"></select></header>
     <main>
-
         <div id="getResponse"></div>
+        <button type="button" class="code-example-btn">пример кода</button>
+        <pre class="code-example">
+            <code>
+                <body>
+                    <header><select name="linkSelect" id="linkSelect"></select></header>
+                    <main>
+                
+                        <div id="getResponse"></div>
+                    </main>
+                    <footer></footer>
+                    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                    <script>
+                        const getResponse = document.getElementById('getResponse');
+                
+                
+                        axios.get('https://jsonplaceholder.typicode.com/posts', {
+                            params: {
+                                userId: 1 // Параметры запроса передаются через объект params
+                            }
+                        })
+                            .then(response => {
+                
+                                for (let i = 0; i < response.data.length; i++) {
+                                    const itemObject = response.data[i];
+                                    let ulContainer = document.createElement("ul");
+                                    getResponse.appendChild(ulContainer);
+                                    for (const item in itemObject) {
+                                        let liContainer = document.createElement("li");
+                                        ulContainer.appendChild(liContainer)
+                                            .textContent = `${item}: ${itemObject[item]}`;
+                                    }
+                                }
+                                console.log(response.data);
+                            })
+                            .catch(error => {
+                                getResponse.textContent = `ERROR!: ${error}`;
+                                console.error('Ошибка при выполнении запроса: ', error);
+                            });
+                    </script>
+                    <script src="index.js"></script>
+                </body>
+            </code>
+        </pre>
     </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
