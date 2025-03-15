@@ -1,8 +1,7 @@
 function createDropdown() {
     // Создаем элемент select
  
-    select.onchange = navigate;
-
+    
     // Создаем опции
     var options = [
         { value: "", text: "Выберите ссылку" },
@@ -14,20 +13,21 @@ function createDropdown() {
         { value: "https://sasha1985y.github.io/JS-examples/axios_parallel_queries6", text: "axios_parallel_queries6" },
         { value: "https://sasha1985y.github.io/JS-examples/axios_interceptors7", text: "axios_interceptors7" },
     ];
-
+    
     options.forEach(function(option) {
         var opt = document.createElement("option");
         opt.value = option.value;
         opt.textContent = option.text;
         select.appendChild(opt);
     });
-
+    
     // Добавляем select в body или в нужный контейнер
     //document.body.appendChild(select);
 }
 
 function navigate() {
     var select = document.getElementById("linkSelect");
+    select.onchange = navigate;
     var url = select.value;
     if (url) {
         window.location.href = url; // Переход по выбранной ссылке
