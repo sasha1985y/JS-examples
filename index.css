@@ -44,4 +44,5 @@ header {
     position: fixed;
     text-align: end;
     height: 10vh;
+    width: 100vw;
 }
