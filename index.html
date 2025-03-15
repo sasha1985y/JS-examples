@@ -6,12 +6,14 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link rel="stylesheet" href="index.css">
     <title>Примеры JavaScript-кода</title>
     <style>
 
         header {
-            text-align: end;
+            display: flex;
+            justify-content: space-evenly;
             min-height: 35vh;
             background: url('pano.jpg') fixed;
             background-repeat: no-repeat;
@@ -36,6 +38,19 @@
             font-size: xx-large;
         }
 
+        .applogo {
+            width: 10%;
+            height: 10%;
+            transition: all 1.5s;
+        }
+
+        .applogo:hover {
+            transition: all 2s;
+            -webkit-transform: scale(1.5) rotate(1440deg);
+            -ms-transform: scale(1.5) rotate(1440deg);
+            transform: scale(1.5) rotate(1440deg);
+        }
+        
         @media (min-width: 320px) {
             .text {
                 top: 76vw;
@@ -94,7 +109,10 @@
 </head>
 
 <body>
-    <header><select name="linkSelect" id="linkSelect"></select></header>
+    <header>
+        <img src="logo.svg" alt="logo" class="applogo">
+        <select name="linkSelect" id="linkSelect"></select>
+    </header>
     <main>
         <div class="text">В этом блоке рассмотрим примеры работы JavaScript</div>
     </main>

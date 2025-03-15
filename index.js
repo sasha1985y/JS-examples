@@ -24,9 +24,6 @@ function createDropdown() {
         opt.textContent = option.text;
         select.appendChild(opt);
     });
-
-    // Добавляем select в body или в нужный контейнер
-    //document.body.appendChild(select);
 }
 
 function navigate() {
