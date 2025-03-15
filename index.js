@@ -30,7 +30,7 @@ function createDropdown() {
 function navigate() {
     var select = document.getElementById("linkSelect");
     var header = document.getElementsByTagName("header");
-    header.appendChild("select");
+    header.appendChild(select);
     var url = select.value;
     if (url) {
         window.location.href = url; // Переход по выбранной ссылке
