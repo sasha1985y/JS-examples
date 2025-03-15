@@ -26,7 +26,7 @@
                     <footer></footer>
                     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
                     <script>
-                        const getResponse = document.getElementById('getResponse');
+                        const getResponse_2 = document.getElementById('getResponse_2');
                 
                 
                         axios.get('https://jsonplaceholder.typicode.com/posts', {
@@ -39,7 +39,7 @@
                                 for (let i = 0; i < response.data.length; i++) {
                                     const itemObject = response.data[i];
                                     let ulContainer = document.createElement("ul");
-                                    getResponse.appendChild(ulContainer);
+                                    getResponse_2.appendChild(ulContainer);
                                     for (const item in itemObject) {
                                         let liContainer = document.createElement("li");
                                         ulContainer.appendChild(liContainer)
@@ -49,7 +49,7 @@
                                 console.log(response.data);
                             })
                             .catch(error => {
-                                getResponse.textContent = `ERROR!: ${error}`;
+                                getResponse_2.textContent = `ERROR!: ${error}`;
                                 console.error('Ошибка при выполнении запроса: ', error);
                             });
                     </script>
