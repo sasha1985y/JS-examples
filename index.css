@@ -35,3 +35,7 @@ a {
 .test {
     color: var(--special-text-color);
 }
+
+#linkSelect {
+    position: fixed;
+}
