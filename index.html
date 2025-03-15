@@ -12,8 +12,7 @@
     <style>
 
         header {
-            display: flex;
-            justify-content: space-evenly;
+            text-align: end;
             min-height: 35vh;
             background: url('pano.jpg') fixed;
             background-repeat: no-repeat;
@@ -33,7 +32,7 @@
         .text {
             position: relative;
             display: inline;
-            top: 26vw;
+            top: 6vh;
             color: var(--bacground-color);
             font-size: xx-large;
         }
@@ -50,7 +49,7 @@
             -ms-transform: scale(1.5) rotate(1440deg);
             transform: scale(1.5) rotate(1440deg);
         }
-        
+
         @media (min-width: 320px) {
             .text {
                 top: 76vw;
@@ -110,13 +109,13 @@
 
 <body>
     <header>
-        <img src="logo.svg" alt="logo" class="applogo">
         <select name="linkSelect" id="linkSelect"></select>
     </header>
     <main>
         <div class="text">В этом блоке рассмотрим примеры работы JavaScript</div>
     </main>
-    <footer></footer>
+    <footer><img src="logo.svg" alt="logo" class="applogo"></footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
 </body>
